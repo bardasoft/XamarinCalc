@@ -153,7 +153,7 @@ namespace XamCalc
         {
             if (double.IsNaN(result) || double.IsInfinity(result))
             {
-                return "ERROR";
+                return "ERROR - Division by Zero is not allowed";
             }
             return result.ToString();
         }
