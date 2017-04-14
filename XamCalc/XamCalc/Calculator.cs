@@ -1,5 +1,8 @@
-﻿namespace XamCalc
+﻿using Xamarin.Forms.Internals;
+
+namespace XamCalc
 {
+    [Preserve(AllMembers = true)]
     public class Calculator
     {
         public double? FirstOperator { get; set; }
