@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using Microsoft.Azure.Mobile;
+using Microsoft.Azure.Mobile.Analytics;
+using Microsoft.Azure.Mobile.Crashes;
 using Xamarin.Forms;
 
 namespace XamCalc
@@ -18,7 +20,7 @@ namespace XamCalc
 
         protected override void OnStart()
         {
-            // Handle when your app starts
+            MobileCenter.Start("android=18619034-ca31-4a1d-9d1a-8f67a76e4d36;",typeof(Analytics), typeof(Crashes));
         }
 
         protected override void OnSleep()
