@@ -20,7 +20,7 @@ namespace XamCalc
 
         protected override void OnStart()
         {
-            MobileCenter.Start("android=18619034-ca31-4a1d-9d1a-8f67a76e4d36;",typeof(Analytics), typeof(Crashes));
+            MobileCenter.Start("android=18619034-ca31-4a1d-9d1a-8f67a76e4d36;ios=fee95673-3c6f-490f-b9ed-e0300f4f46e9;",typeof(Analytics), typeof(Crashes));
         }
 
         protected override void OnSleep()
