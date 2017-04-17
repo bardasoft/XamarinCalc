@@ -56,5 +56,23 @@ namespace XamCalc.UITests
             var display = result.Text;
             Assert.AreEqual("73",display,message:"Result was not as expected.");
         }
+
+        [Test]
+        public void Multiply()
+        {
+            app.Tap(x => x.Marked("5"));
+            app.Tap(x => x.Marked("0"));
+            app.Tap(x => x.Marked("1"));
+            app.Screenshot("First");
+            app.Tap(x => x.Marked("X"));
+            app.Screenshot("Operation");
+            app.Tap(x => x.Marked("2"));
+            app.Tap(x => x.Marked("5"));
+            app.Screenshot("Second");
+            app.Tap(x => x.Marked("="));
+            var displayText = app.WaitForElement(x => x.Marked("Display")).First().Text;
+            app.Screenshot("Waited for view with class: FormsTextView with text: 12525 with marked: Display");
+            Assert.AreEqual("12525",displayText);
+        }
     }
 }
